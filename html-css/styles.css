@@ -1,3 +1,66 @@
+
+header{
+    background-color: black;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 10px;
+}
+h2{
+    color: cornflowerblue;
+    display: inline;
+}
+#top {
+    color: cornflowerblue;
+    display: inline;
+}
+.big {
+    
+}
+.pic {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: flex-start;
+    height: 150px;
+    width: 100px;
+    box-shadow: 1px 1px 5px 1px gray ;
+    background-color: white;
+    position: absolute;
+    right: 50px;
+    top: 15px;
+}
+.art{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: flex-start;
+    height: 200px;
+    width: 100px;
+    box-shadow: 1px 1px 5px 1px gray ;
+    background-color: white;
+    position: absolute;
+    right: 50px;
+    top: 200px;
+    
+}
+.YN {
+    bottom: 10px;
+}
+
+body{
+    margin-left: 100px;
+    margin-right: 100px;
+  
+}
+
+svg{
+    display: inline-block;
+    margin: 15px;
+}
 /* 
 
 these are the colors used in the example
