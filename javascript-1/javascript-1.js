@@ -8,7 +8,7 @@
     Call the array 'myArr'.
 */
 
-//CODE HERE
+const myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77];
 
 
 ////////////////////PROBLEM 2////////////////////
@@ -20,7 +20,8 @@
 
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
-//CODE HERE
+const foundZ = [5][2][1]
+
 
 
 ////////////////////PROBLEM 3////////////////////
@@ -36,7 +37,7 @@ const savannah = ['lion', 'zebra', 'lion', 'giraffe']
 const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
-//CODE HERE
+const animals = [...forest, ...ocean, ...savannah, ...desert]
 
 
 /*
@@ -44,7 +45,7 @@ const desert = ['rattlesnake', 'coyote']
     Call the new array 'animalsCopy' and add 'elephant' onto the end of the array.
 */
 
-//CODE HERE
+const animalsCopy = [...forest, ...ocean, ...savannah, ...desert, ...elephant]
 
 
 ////////////////////PROBLEM 4////////////////////
@@ -55,7 +56,7 @@ const desert = ['rattlesnake', 'coyote']
     If the numbers are the same, just return the number.
 */
 
-//CODE HERE
+const compareNums = (num1, num2)=>
 
   
 ////////////////////PROBLEM 5////////////////////
@@ -118,7 +119,7 @@ const desert = ['rattlesnake', 'coyote']
     looping over the shapes object and deleting any property whose value is odd number.
 */
 
-//CODE HERE
+functio n
   
   
 ////////////////////PROBLEM 9////////////////////

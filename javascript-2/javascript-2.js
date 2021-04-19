@@ -250,7 +250,12 @@ const userInfo = {
       - create at least 2 kid objects
 */
 
-//CODE HERE
+let person ={
+  name: 'bob',
+  age: '29',
+  jobs: 'coder', 'farmer', 'mechanic',
+  birthday: function bday
+}
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
