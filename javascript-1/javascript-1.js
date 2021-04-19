@@ -56,9 +56,9 @@ const animalsCopy = [...forest, ...ocean, ...savannah, ...desert, ...elephant]
     If the numbers are the same, just return the number.
 */
 
-const compareNums = (num1, num2)=>
+const compareNums = (num1, num2) =>
 
-  
+
 ////////////////////PROBLEM 5////////////////////
 /*
     Write a one line arrow function called 'bestMovie' that takes in one parameter,
@@ -69,121 +69,139 @@ const compareNums = (num1, num2)=>
 */
 
 //CODE HERE
-  
-  
+
+
 ////////////////////PROBLEM 6////////////////////
 /*
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
 
 //CODE HERE
-  
+
 
 ////////////////////PROBLEM 7////////////////////
 
 //DO NOT EDIT CODE BELOW
   const gameInfo = {
-    name: 'Splendor', 
-    desc: 'Renaissance merchants race to grab gems, acquire property, and please nobility.', 
-    players: [2,3,4],
+    name: 'Splendor',
+    desc: 'Renaissance merchants race to grab gems, acquire property, and please nobility.',
+    players: [2, 3, 4],
     playingTime: 30,
     minAge: 10,
     rating: 1
-  }
-//DO NOT EDIT CODE ABOVE
+}
+    //DO NOT EDIT CODE ABOVE
 
-/*
-    You don't agree with whowever rated Splendor,
-    delete the rating property off of the gameInfo object.
-*/
+    /*
+        You don't agree with whowever rated Splendor,
+        delete the rating property off of the gameInfo object.
+    */
 
-//CODE HERE
-  
+    //CODE HERE
 
-////////////////////PROBLEM 8////////////////////
 
-//DO NOT EDIT CODE BELOW
-  const shapes = {
-    triangle: 3,
-    square: 4, 
-    rectangle: 4,
-    pentagon: 5,
-    hexagon: 6, 
-    septagon: 7,
-    octagon: 8
-  }
-//DO NOT EDIT CODE ABOVE
-  
-/*
-    You only like even numbers, so get rid of the other shapes by
-    looping over the shapes object and deleting any property whose value is odd number.
-*/
+    ////////////////////PROBLEM 8////////////////////
 
-functio n
-  
-  
-////////////////////PROBLEM 9////////////////////
-
-//DO NOT EDIT CODE BELOW
-const classes = [
-    {
-      title: 'JavaScript 101',
-      instructor: 'Emily',
-      days: ['M', 'W', 'F'],
-      time: 11,
-      inPerson: false,
-      homework: true
-    },
-    {
-      title: 'UI Design',
-      instructor: 'Daniel',
-      days: ['T', 'Th'],
-      time: 9,
-      inPerson: true,
-      homework: false
-    },
-    {
-      title: 'Creating Servers',
-      instructor: 'Jess',
-      days: ['M', 'W'],
-      time: 1,
-      inPerson: true,
-      homework: true
+    //DO NOT EDIT CODE BELOW
+    const shapes = {
+        triangle: 3,
+        square: 4,
+        rectangle: 4,
+        pentagon: 5,
+        hexagon: 6,
+        septagon: 7,
+        octagon: 8
     }
-  ]
-//DO NOT EDIT CODE ABOVE
-  
-/*
-    Write a for loop that loops over the classes array,
-    nest a for in loop to loop over each object.
-    Check to see if any of the properties' values are the boolean 'true'.
-    If they are true, change them to false so that now you have 
-    all online classes with no homework.
-*/
+    //DO NOT EDIT CODE ABOVE
 
-//CODE HERE
+    /*
+        You only like even numbers, so get rid of the other shapes by
+        looping over the shapes object and deleting any property whose value is odd number.
+    */
 
-  
-////////////////////PROBLEM 10////////////////////
-/*
-    Use nested for loops to compare the letters in the lettersToPair array below.
-    When you find a pair, push the indexes of the letters into the pairsArray as an array.
-    For example, looping the array ['b', 'x', 'x', 'b'] 
-    should create the array [[0,3], [1,2]].
-*/
-  
-//DO NOT EDIT CODE BELOW  
-const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n']  
-let pairsArray = []
-//DO NOT EDIT CODE ABOVE
+    for (let key in shapes) {
+        if (shapes[key] % 2 === 1) {
+            delete shapes[key]
+        }
+    }
 
-//CODE HERE
 
-    
+    ////////////////////PROBLEM 9////////////////////
+
+    //DO NOT EDIT CODE BELOW
+    const classes = [
+        {
+            title: 'JavaScript 101',
+            instructor: 'Emily',
+            days: ['M', 'W', 'F'],
+            time: 11,
+            inPerson: false,
+            homework: true
+        },
+        {
+            title: 'UI Design',
+            instructor: 'Daniel',
+            days: ['T', 'Th'],
+            time: 9,
+            inPerson: true,
+            homework: false
+        },
+        {
+            title: 'Creating Servers',
+            instructor: 'Jess',
+            days: ['M', 'W'],
+            time: 1,
+            inPerson: true,
+            homework: true
+        }
+    ]
+    //DO NOT EDIT CODE ABOVE
+
+    /*
+        Write a for loop that loops over the classes array,
+        nest a for in loop to loop over each object.
+        Check to see if any of the properties' values are the boolean 'true'.
+        If they are true, change them to false so that now you have 
+        all online classes with no homework.
+    */
+
+    for (let i = 0; i < classes.length; i++) {
+        for (let key in classes[i]) {
+            if (classes[i][key] === true) {
+                classes[i][key] = flase
+            }
+
+        }
+    }
+
+
+    ////////////////////PROBLEM 10////////////////////
+    /*
+        Use nested for loops to compare the letters in the lettersToPair array below.
+        When you find a pair, push the indexes of the letters into the pairsArray as an array.
+        For example, looping the array ['b', 'x', 'x', 'b'] 
+        should create the array [[0,3], [1,2]].
+    */
+
+    //DO NOT EDIT CODE BELOW  
+    const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n']
+    let pairsArray = []
+    //DO NOT EDIT CODE ABOVE
+
+    for (let i = 0; i < lettersToPair.length; i++) {
+        for (let j = i + 1; j < lettersToPair.length; j++) {
+            if (lettersToPair[i] === lettersToPair[j]) {
+                let newArr = [i, j]
+                pairsArray.push(newArr)
+            }
+        }
+    }
+
+
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
 /*
-    Problems 12-14 are all going to build off of problem 11. 
+    Problems 12-14 are all going to build off of problem 11.
 */
 
 
@@ -198,13 +216,13 @@ let pairsArray = []
 
 
 /*
-    Invoke your dog constructor passing in 'Fido' for the name, 3 for the age, 
+    Invoke your dog constructor passing in 'Fido' for the name, 3 for the age,
     'Jack Russell' for the breed, and an array containing the strings 'sit' and 'shake'.
     Store the result in a variable called 'fido'.
 */
 
 //CODE HERE
-  
+
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -222,11 +240,11 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
-  
+
+
 ////////////////////PROBLEM 13////////////////////
 /*
-    Write a function called 'teachTrick' that will take in one parameter, trick, 
+    Write a function called 'teachTrick' that will take in one parameter, trick,
     and push that trick into a trick's array and return the updated array.
     You will give context to 'techTrick' using the .bind method.
     Tricks will come from that context, so you should reference 'this.tricks' to access the correct array.
@@ -241,8 +259,8 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
-  
+
+
 ////////////////////PROBLEM 14////////////////////
 /*
     Write a function called 'dogIntro' that will take in two parameters, treat and toy,
@@ -255,13 +273,13 @@ let pairsArray = []
 
 
 /*
-    Invoke the apply method on dogIntro, passing in fido as the context 
+    Invoke the apply method on dogIntro, passing in fido as the context
     with 'chicken' as the treat and 'tennis ball' as the toy
     and save the result to a variable called fidoIntro.
 */
 
 //CODE HERE
-  
+
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -272,7 +290,7 @@ let pairsArray = []
 
 //CODE HERE
 
-  
+
 /*
     Next make three new phones using your constructor function.
     Save them to the variables below (make sure you uncomment them).
@@ -286,11 +304,11 @@ let pairsArray = []
 
 //CODE HERE
   // let phone1 = 
-  
+
   // let phone2 = 
-  
+
   // let phone3 = 
-  
+
 /*
     Last, add a prototype method to Phone.
     Call the method 'sell'.
@@ -301,4 +319,3 @@ let pairsArray = []
 
 //CODE HERE
 
-  

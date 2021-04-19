@@ -36,6 +36,10 @@ let foods = [
 */
 
 //CODE HERE
+foods.forEach(food => {
+  const (carbs, fat, protein) = food
+  food.calories = carbs * 4 + fat * 4 + protein * 4
+})
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -81,7 +85,10 @@ const products = [
 */
 
 //CODE HERE
-
+const saleProducts = products.map(product => {
+  product.price *= .75
+  return product
+})
 ////////////////////PROBLEM 3////////////////////
 /*
   A customer has placed an order - they want one of every product that has blue on it. 
@@ -250,7 +257,7 @@ const userInfo = {
       - create at least 2 kid objects
 */
 
-let person ={
+let person = {
   name: 'bob',
   age: '29',
   jobs: 'coder', 'farmer', 'mechanic',
