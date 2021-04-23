@@ -8,7 +8,7 @@
     Call the array 'myArr'.
 */
 
-const myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77];
+let myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77]
 
 
 ////////////////////PROBLEM 2////////////////////
@@ -20,7 +20,7 @@ const myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77];
 
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
-const foundZ = [5][2][1]
+let foundZ = nestedLetters[5][2][1]
 
 
 
@@ -45,7 +45,7 @@ const animals = [...forest, ...ocean, ...savannah, ...desert]
     Call the new array 'animalsCopy' and add 'elephant' onto the end of the array.
 */
 
-const animalsCopy = [...forest, ...ocean, ...savannah, ...desert, ...elephant]
+let animalsCopy = [...animals, 'elephant']
 
 
 ////////////////////PROBLEM 4////////////////////
@@ -56,9 +56,24 @@ const animalsCopy = [...forest, ...ocean, ...savannah, ...desert, ...elephant]
     If the numbers are the same, just return the number.
 */
 
-const compareNums = (num1, num2) =>
+// function compareNums(num1, num2) {
+//     for (let i = 0; i < 1; i++) {
+//         if (num1 > num2) {
+//             return num1
+//             if (num2 > num1) {
+//                 return num2
+//             } else return num1
+//         }
+//     }
+// }
 
-
+let compareNums = (num1, num2) => {
+    for (let i = 0; i < 1; i++) {
+        if (num1 > num2) {
+            return num1
+        } else return num2
+    }
+}
 ////////////////////PROBLEM 5////////////////////
 /*
     Write a one line arrow function called 'bestMovie' that takes in one parameter,
@@ -69,20 +84,20 @@ const compareNums = (num1, num2) =>
 */
 
 //CODE HERE
-
+let bestMovie = (movie) => `${movie} is the best movie ever!`
 
 ////////////////////PROBLEM 6////////////////////
 /*
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
-
+let jsNinja = () => 'I am a JavaScript ninja!';
 //CODE HERE
 
 
 ////////////////////PROBLEM 7////////////////////
 
 //DO NOT EDIT CODE BELOW
-  const gameInfo = {
+let gameInfo = {
     name: 'Splendor',
     desc: 'Renaissance merchants race to grab gems, acquire property, and please nobility.',
     players: [2, 3, 4],
@@ -90,112 +105,112 @@ const compareNums = (num1, num2) =>
     minAge: 10,
     rating: 1
 }
-    //DO NOT EDIT CODE ABOVE
+//DO NOT EDIT CODE ABOVE
 
-    /*
-        You don't agree with whowever rated Splendor,
-        delete the rating property off of the gameInfo object.
-    */
+/*
+    You don't agree with whowever rated Splendor,
+    delete the rating property off of the gameInfo object.
+*/
 
-    //CODE HERE
+//CODE HERE
+delete gameInfo.rating;
 
+////////////////////PROBLEM 8////////////////////
 
-    ////////////////////PROBLEM 8////////////////////
+//DO NOT EDIT CODE BELOW
+const shapes = {
+    triangle: 3,
+    square: 4,
+    rectangle: 4,
+    pentagon: 5,
+    hexagon: 6,
+    septagon: 7,
+    octagon: 8
+}
+//DO NOT EDIT CODE ABOVE
 
-    //DO NOT EDIT CODE BELOW
-    const shapes = {
-        triangle: 3,
-        square: 4,
-        rectangle: 4,
-        pentagon: 5,
-        hexagon: 6,
-        septagon: 7,
-        octagon: 8
+/*
+    You only like even numbers, so get rid of the other shapes by
+    looping over the shapes object and deleting any property whose value is odd number.
+*/
+
+for (let key in shapes) {
+    if (shapes[key] % 2 === 1) {
+        delete shapes[key]
     }
-    //DO NOT EDIT CODE ABOVE
+}
 
-    /*
-        You only like even numbers, so get rid of the other shapes by
-        looping over the shapes object and deleting any property whose value is odd number.
-    */
 
-    for (let key in shapes) {
-        if (shapes[key] % 2 === 1) {
-            delete shapes[key]
+////////////////////PROBLEM 9////////////////////
+
+//DO NOT EDIT CODE BELOW
+const classes = [
+    {
+        title: 'JavaScript 101',
+        instructor: 'Emily',
+        days: ['M', 'W', 'F'],
+        time: 11,
+        inPerson: false,
+        homework: true
+    },
+    {
+        title: 'UI Design',
+        instructor: 'Daniel',
+        days: ['T', 'Th'],
+        time: 9,
+        inPerson: true,
+        homework: false
+    },
+    {
+        title: 'Creating Servers',
+        instructor: 'Jess',
+        days: ['M', 'W'],
+        time: 1,
+        inPerson: true,
+        homework: true
+    }
+]
+//DO NOT EDIT CODE ABOVE
+
+/*
+    Write a for loop that loops over the classes array,
+    nest a for in loop to loop over each object.
+    Check to see if any of the properties' values are the boolean 'true'.
+    If they are true, change them to false so that now you have 
+    all online classes with no homework.
+*/
+
+for (let i = 0; i < classes.length; i++) {
+    for (let key in classes[i]) {
+        if (classes[i][key] === true) {
+            classes[i][key] = false
+        }
+
+    }
+}
+
+
+////////////////////PROBLEM 10////////////////////
+/*
+    Use nested for loops to compare the letters in the lettersToPair array below.
+    When you find a pair, push the indexes of the letters into the pairsArray as an array.
+    For example, looping the array ['b', 'x', 'x', 'b'] 
+    should create the array [[0,3], [1,2]].
+*/
+
+//DO NOT EDIT CODE BELOW  
+const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n']
+let pairsArray = []
+//DO NOT EDIT CODE ABOVE
+
+for (let i = 0; i < lettersToPair.length; i++) {
+    for (let j = i + 1; j < lettersToPair.length; j++) {
+        if (lettersToPair[i] === lettersToPair[j]) {
+            let newArr = [i, j]
+            pairsArray.push(newArr)
         }
     }
-
-
-    ////////////////////PROBLEM 9////////////////////
-
-    //DO NOT EDIT CODE BELOW
-    const classes = [
-        {
-            title: 'JavaScript 101',
-            instructor: 'Emily',
-            days: ['M', 'W', 'F'],
-            time: 11,
-            inPerson: false,
-            homework: true
-        },
-        {
-            title: 'UI Design',
-            instructor: 'Daniel',
-            days: ['T', 'Th'],
-            time: 9,
-            inPerson: true,
-            homework: false
-        },
-        {
-            title: 'Creating Servers',
-            instructor: 'Jess',
-            days: ['M', 'W'],
-            time: 1,
-            inPerson: true,
-            homework: true
-        }
-    ]
-    //DO NOT EDIT CODE ABOVE
-
-    /*
-        Write a for loop that loops over the classes array,
-        nest a for in loop to loop over each object.
-        Check to see if any of the properties' values are the boolean 'true'.
-        If they are true, change them to false so that now you have 
-        all online classes with no homework.
-    */
-
-    for (let i = 0; i < classes.length; i++) {
-        for (let key in classes[i]) {
-            if (classes[i][key] === true) {
-                classes[i][key] = flase
-            }
-
-        }
-    }
-
-
-    ////////////////////PROBLEM 10////////////////////
-    /*
-        Use nested for loops to compare the letters in the lettersToPair array below.
-        When you find a pair, push the indexes of the letters into the pairsArray as an array.
-        For example, looping the array ['b', 'x', 'x', 'b'] 
-        should create the array [[0,3], [1,2]].
-    */
-
-    //DO NOT EDIT CODE BELOW  
-    const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n']
-    let pairsArray = []
-    //DO NOT EDIT CODE ABOVE
-
-    for (let i = 0; i < lettersToPair.length; i++) {
-        for (let j = i + 1; j < lettersToPair.length; j++) {
-            if (lettersToPair[i] === lettersToPair[j]) {
-                let newArr = [i, j]
-                pairsArray.push(newArr)
-            }
-        }
-    }
+}
 
 
 
@@ -213,7 +228,12 @@ const compareNums = (num1, num2) =>
 */
 
 //CODE HERE
-
+function Dog(name, age, breed, tricks) {
+    this.name = name
+    this.age = age
+    this.breed = breed
+    this.tricks = tricks
+}
 
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age,
@@ -222,7 +242,7 @@ const compareNums = (num1, num2) =>
 */
 
 //CODE HERE
-
+let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake'])
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -232,7 +252,9 @@ const compareNums = (num1, num2) =>
 */
 
 //CODE HERE
-
+function bark() {
+    return this.name + ' says bark!'
+}
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -240,7 +262,7 @@ const compareNums = (num1, num2) =>
 */
 
 //CODE HERE
-
+let fidoSpeak = bark.call(fido)
 
 ////////////////////PROBLEM 13////////////////////
 /*
@@ -251,7 +273,10 @@ const compareNums = (num1, num2) =>
 */
 
 //CODE HERE
-
+function teachTrick(trick) {
+    this.tricks.push(trick)
+    return this.tricks
+}
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -259,7 +284,7 @@ const compareNums = (num1, num2) =>
 */
 
 //CODE HERE
-
+let teachStay = teachTrick.bind(fido, 'stay')
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -270,7 +295,9 @@ const compareNums = (num1, num2) =>
 */
 
 //CODE HERE
-
+function dogIntro(treat, toy) {
+    return `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`
+}
 
 /*
     Invoke the apply method on dogIntro, passing in fido as the context
@@ -279,7 +306,7 @@ const compareNums = (num1, num2) =>
 */
 
 //CODE HERE
-
+let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball'])
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -289,7 +316,13 @@ const compareNums = (num1, num2) =>
 */
 
 //CODE HERE
-
+function Phone(brand, model, storage, color, sold) {
+    this.brand = brand
+    this.model = model
+    this.storage = storage
+    this.color = color
+    this.sold = sold
+}
 
 /*
     Next make three new phones using your constructor function.
@@ -303,11 +336,11 @@ const compareNums = (num1, num2) =>
 */
 
 //CODE HERE
-  // let phone1 = 
+let phone1 = new Phone('motorola', 'razr', 8474838, 'black', false)
 
-  // let phone2 = 
+let phone2 = new Phone('motorola', 'razr', 8474838, 'black', false)
 
-  // let phone3 = 
+let phone3 = new Phone('motorola', 'razr', 8474838, 'black', false)
 
 /*
     Last, add a prototype method to Phone.
@@ -318,4 +351,7 @@ const compareNums = (num1, num2) =>
 */
 
 //CODE HERE
-
+Phone.prototype.sell = function () {
+    this.sold = true
+    return `${this.brand} ${this.model} has been sold.`
+}
